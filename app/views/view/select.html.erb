@@ -1,0 +1,8 @@
+<%= form_with model: @book do |form| %>
+  <%= form.select :publish, ['おはよう', 'こんにちは', 'こんばんは'], {include_blank: '選択してください'}, class: 'pub' %><br />
+  <%= form.select :publish, {'おはよう' =>1, 'こんにちは'=>2, 'こんばんは'=>3}  %>
+  <%= form.select(:publish,
+    [['技術評論社', 1], ['翔泳社', 2], ['日経BP社', 3]]) %><br />
+  <%= form.select :publish, ['技術評論社', '翔泳社', '日経BP社'],
+    { include_blank: '選択してください' } ,multiple:true %>
+<% end %>

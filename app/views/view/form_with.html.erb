@@ -1,0 +1,9 @@
+<%= form_with model: @book do |form| %>
+  <div class="field">
+    <%= form.label :isbn %><br />
+    <%= form.text_field :isbn, size:25 %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<%end%>

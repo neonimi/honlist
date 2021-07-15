@@ -1,0 +1,19 @@
+<%= form_with model: @book do |form| %>
+  テキストボックス：
+  <%= form.text_field :isbn, size: 20, maxlength: 25, readonly: true %><br />
+  パスワードボックス：
+  <%= form.password_field :isbn, size: 10, maxlength: 15, disabled: true %><br />
+  テキストエリア：
+  <%= form.text_area :isbn, size: 20, cols: 40, rows: 10 %><br />
+  ラジオボタン：
+  <label><%= form.radio_button :publish, 'おはよう', class: :rd %>おはよう</label>
+  <label><%= form.radio_button :publish, 'こんにちは', class: :rd %>こんにちは</label>
+  <label><%= form.radio_button :publish, 'こんばんは', class: :rd %>こんばんは</label>
+  チェックボックス：
+  <label><%= form.check_box :dl, { class: 'chk'}, 'yes', 'no' %>ダウンロードサンプルあり？</label>
+  ファイル入力ボックス：
+  <%= form.file_field :isbn, size: 10, maxlength: 15 %><br />
+  隠しフィールド：
+  
+  <%= form.hidden_field :isbn %><br />
+<% end %>
